@@ -57,12 +57,12 @@ The code consist of :
 
 - DQN_Banana_Navigation.ipynb: 
 
-1) **QLearningModel Class**: This is a regular fully connected Deep Neural Network using the [PyTorch Framework](https://pytorch.org/docs/0.4.0/). This network will be trained to predict the action to perform depending on the environment observed states. This Neural Network is used by the DQN agent and is composed of :
+1)**QLearningModel Class**: This is a regular fully connected Deep Neural Network using the [PyTorch Framework](https://pytorch.org/docs/0.4.0/). This network will be trained to predict the action to perform depending on the environment observed states. This Neural Network is used by the DQN agent and is composed of :
   - the input layer which size depends of the state_size parameter passed in the constructor
   - 2 hidden fully connected layers consisting of 64 and 128 cells respectively
   - the output layer which size depends of the action_size parameter passed in the constructor
 
-2) **ReplayBuffer Class** : The ReplayBuffer class implements a fixed-size buffer to store experience tuples (state, action, reward, next_state, done) 
+2)**ReplayBuffer Class** : The ReplayBuffer class implements a fixed-size buffer to store experience tuples (state, action, reward, next_state, done) 
     
     - add() 
     Allows to add an experience step to the memory
@@ -70,7 +70,7 @@ The code consist of :
     - sample() 
     Allows to randomly sample a batch of experience steps for the learning 
 
-3) **BananaAgent Class** : The Qlearning agent is defined in the following way
+3)**BananaAgent Class** : The Qlearning agent is defined in the following way
 
     - constructor : 
       - Initialize the memory buffer (*Replay Buffer*)
