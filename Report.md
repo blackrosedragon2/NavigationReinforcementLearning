@@ -124,7 +124,7 @@ Given the chosen architecture and parameters, our results are :
 
 ![Score evolution during the training](images/score_plot.png)
 
-**These results meets the project's expectation as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in just 900 episodes, and getting a maximum average score of 15.52** (In comparison, according to Udacity's solution code for the project, their agent was benchmarked to be able to solve the project in fewer than 1800 episodes)
+**These results meets the project's expectation as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in just 900 episodes, and getting a maximum average score of 15.52** (In comparison, according to Udacity's solution code for the project, their agent was benchmarked to be able to solve the project in fewer than 1800 episodes, the goal has been achieved in half the number of episodes.)
 
 ### Ideas for future work
 
