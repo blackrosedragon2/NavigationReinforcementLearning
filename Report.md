@@ -1,4 +1,4 @@
-# Banana Agent
+# Banana Agent 
 
 
 ## Project's goal
@@ -39,8 +39,7 @@ This implementation includes the 2 major training improvements by [Deepmind](htt
 - Experience Replay 
 - Fixed Q Targets
 
-> Reinforcement learning is known to be unstable or even to diverge when a nonlinear function approximator such as a neural network is used to represent the action-value (also known as Q) function. This instability has several causes: the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and therefore change the data distribution, and the correlations
-between the action-values and the target values .
+> Reinforcement learning is known to be unstable or even to diverge when a nonlinear function approximator such as a neural network is used to represent the action-value (also known as Q) function. This instability has several causes: the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and therefore change the data distribution, and the correlations between the action-values and the target values .
 We address these instabilities with a novel variant of Q-learning, which uses two key ideas. First, we used a biologically inspired mechanism termed experience replay that randomizes over the data, thereby removing correlations in the observation sequence and smoothing over changes in the data distribution. Second, we used an iterative update that adjusts the action-values towards target values that are only periodically updated, thereby reducing correlations with the target.
 
 ### Algorithm
@@ -80,7 +79,7 @@ The code consist of :
     
     - step() : 
       - Allows to store a step taken by the agent (state, action, reward, next_state, done) in the Replay Buffer/Memory
-      - Every 4 steps (and if their are enough samples available in the Replay Buffer), update the *target* network weights with the current weight values from the *local* network (That's part of the Fixed Q Targets technique)
+      - Every 10 steps (and if their are enough samples available in the Replay Buffer), update the *target* network weights with the current weight values from the *local* network (That's part of the Fixed Q Targets technique)
     
     - act() 
     Returns actions for the given state as per current policy (Note : The action selection use an Epsilon-greedy selection so that to balance between *exploration* and *exploitation* for the Q Learning)
@@ -98,6 +97,7 @@ This Jupyter notebooks allows to train the agent as well as:
   - Train an agent using DQN
   - Plot the scores
   - Test agent for the duration of 100 episodes
+  
 ### DQN parameters and results
 
 The DQN agent uses the following parameters values (defined in dqn_agent.py)
